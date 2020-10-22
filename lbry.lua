@@ -17,7 +17,7 @@ function parse()
         line = vlc.readline()
 		if not line then break end
 			if string.match( line, "<meta property=\"og:video\"" ) then
-				_,_,url = string.find( line, "content=\"https://lbry.tv/$/embed/(.-)\"" )
+				_,_,url = string.find( line, "content=\"https://lbry.tv/$/embed/(.-)?\"" )
 			end
 
 			if string.match( line, "<meta property=\"og:title\"" ) then
