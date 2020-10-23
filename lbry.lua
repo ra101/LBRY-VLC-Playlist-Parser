@@ -41,7 +41,7 @@ function parse()
 			end
 	end
 
-	path = "https://cdn.lbryplayer.xyz/api/v3/streams/free/"..url.."/"..string.gsub( name, ' ', '+' )
+	path = "https://cdn.lbryplayer.xyz/api/v3/streams/free/"..url.."/"..string.gsub( name, ' ', '%%20' )
 
 	return { { path = path, name = name, description = description, arturl = arturl, artist = artist } }
 end
