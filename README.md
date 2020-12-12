@@ -4,7 +4,13 @@ This addon will allow [VLC](https://www.videolan.org/vlc/) to open any free [lbr
 
 **Why Create this, when LBRY Desktop app already exists?**
 
-For VLC key-binding... idk... I had nothing better to do...
+~~For VLC key-binding... idk... I had nothing better to do...~~
+
+Helps a lot on older CPUs that cannot run the LBRY streams in the browser.
+
+*(reddit user [bitgoblin10k](https://www.reddit.com/user/bitgoblin10k/) pointed this out)*
+
+
 
 ## Usage
 - Copy the URL of the lbry video ( say [https://lbry.tv/@ra101:a/MasquerBot:1](https://lbry.tv/@ra101/MasquerBot ) )
