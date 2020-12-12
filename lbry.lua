@@ -1,11 +1,11 @@
 --Translate lrby.tv video webpages URLs to corresponding video stream URLs.
--- Author: <RA> (github.com/ra101)
+-- Author: 〈 RA 〉 (github.com/ra101)
 
 
 -- Probe function.
 function probe()
-    return ( vlc.access == "http" or vlc.access == "https" )
-        and string.match( vlc.path, "^lbry%.tv/@.+/.+" )
+	return ( vlc.access == "http" or vlc.access == "https" )
+		and ( string.match( vlc.path, "^lbry%.tv/@.+/.+" ) or string.match( vlc.path, "^lbry%.tv/.+" ) ) 
 end
 
 -- Parse function.
@@ -14,7 +14,7 @@ function parse()
 	local path, url, name, description, arturl, artist
 
 	while true do
-        line = vlc.readline()
+		line = vlc.readline()
 		if not line then break end
 			if string.match( line, "<meta property=\"og:video\"" ) then
 				_,_,url = string.find( line, "content=\"https://lbry.tv/$/embed/(.-)?\"" )
